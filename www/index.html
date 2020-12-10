@@ -1,24 +1,63 @@
 <html>
 	
-	<head>
-		<title>Welcome!</title>
-	</head>
+		<head>
+			<title>Welcome!</title>
+			<link rel="stylesheet" type="text/css" href="css/style.css" />
+			<script>
+				function show(id)
+				{
+					var div = document.getElementById(id);
+					div.style.display = "block";
+				}
+				function hide(id)
+				{
+					var div = document.getElementById(id);
+					div.style.display = "none";
+				}
+				function hideAllMenus(id)
+				{
+					hide('projects');
+					hide('hobbies');
+					hide('stuffdiv');
+				}
+			</script>
+		</head>		
+		
 	
 	<body>
 	
-		<p>Hello and welcome to my site!</p>
-		<p style="font-weight: bold; font-size: 24">This site is likely the best place to be</p>
+		<div id="header">
 		
-		<p style="font-style: italic; font-family: Comic Sans MS">This should be in italic</P>
+			<div style="float:left">
+				Welcome to My Site
+			</div>
+			
+			<div style="float:right">
+				<a href="index.html">Home</a> | <a href="contact.html">Contact</a> | <a href="CV.html">CV </a> | <a onmouseover="show('projects')" href="#">Projects</a> | <a onmouseenter="show('hobbies')" href="#">Hobbies</a> | <a onmouseenter="show('stuffdiv')" href="#">Stuffdiv</a>
+			</div>
+
+
 		
-		<p>Here <b>is some</b> text <i>on my page</i></p>
 		
-		<p style="color: red"> Here is some text</p>
+		<p class="normaltext"> Hello and welcome to my site!</p>
 		
-		<p style="color: rgb(100, 200, 155)"> Here is some text</p>
+		<p class="largetext">This site is likely the best place to be</p>
 		
-		<img style="height: 200px; wideth 200px" src="images/photo-1494548162494-384bba4ab999.jpg">
+		
+		
+
+		
+		<img style="height: 200px; width 200px" src="images/photo-1494548162494-384bba4ab999.jpg">
+		
+		<img style="height: 20%; width 20%" src="images/photo-1494548162494-384bba4ab999.jpg">
+		
+		<a href="contact.html">
+		
+		<div class="footer">
+			<br>
+			<b>Adam Bauer 2020<b/>
+		</div>
 		
 	</body>
 
-<html>
+</html>
