@@ -11,9 +11,7 @@
 	font-family: Comic Sans MS;
 	font-size: 18;
 
-	border-width: 5px;
-	border-style: solid;
-	border-color: rgb(150, 150, 255);
+
 	
 
 }
@@ -40,13 +38,13 @@
 	background-color: teal;
 	color: black;
 	text-align: center;
-	padding: 5px;
+	padding: 4px;
 }
 
 img
 {
 	border-width: 5px;
-	border-style: dotted;
+	border-style: line;
 	border-color: black;
 }
 
