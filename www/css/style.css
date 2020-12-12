@@ -10,10 +10,6 @@
 {
 	font-family: Comic Sans MS;
 	font-size: 18;
-
-
-	
-
 }
 
 .largetext
@@ -63,8 +59,7 @@ allMenus
 	position: absolute;
 	top: 72px;
 	right: 8px;
-	padding: 10px;
-	
+	padding: 10px;	
 }
 
 #projects
