@@ -4,7 +4,7 @@
 	bottom: 0;
 	width: 100%;
 	background: DodgerBlue;
-	height: 6rem;
+	height: 8rem;
 	font-family:  Calibri;
 	font-size: 30;
 	opacity: 0.8;
@@ -44,7 +44,7 @@
 .normaltext
 {
 	font-family: Comic Sans MS;
-	font-size: 16;
+	font-size: 18;
 	color: black;
 }
 
@@ -61,6 +61,43 @@
 	padding: 5px;
 	background: rgb(255, 255, 200);
 }
+
+.active
+{
+	background-color: #4CAF50;
+}
+
+ul
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+	/*position: fixed;
+	width: 100%; */
+}
+
+li
+{
+	float: left;
+}
+
+a
+{
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 8px;
+	text-decoration: none;
+}
+
+li a:hover
+{	
+	background-color: #111;
+}
+
+
 
 img
 {

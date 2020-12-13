@@ -1,25 +1,53 @@
-<nav>
-	<div> <!--style="float:left"-->
-	<a onmouseover="show('Home')" href="home.html">Home</a> |
-	<a onmouseover="show('CV')" href="cv.html">CV </a> |
-	<a onmouseover="show('projects')" href="projects.html">Projects</a> |
-	<a onmouseenter="show('hobbies')" href="hobbies.html">Hobbies</a> 
-	</div>
-</nav><body>
+<html>	
+	<head>
+		<title>__TITLE__ - Adam´s Site</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script>
+			function show(id)
+			{
+				var div = document.getElementById(id);
+				div.style.display = "block";
+			}
+			function hide(id)
+			{
+				var div = document.getElementById(id);
+				div.style.display = "none";
+			}
+			function hideAllMenus(id)
+			{
+				hide('projects');
+				hide('hobbies');
+				hide('stuffdiv');
+			}
+		</script>
+			<div id="header">
+		
+				<div style="float:center">
+					Welcome to My Site
+				</div>
+				<br>
+				<ul>
+					<li><a onmouseover="show('Home')" href="home.html">Home</a> </li>
+					<li><a onmouseover="show('CV')" href="cv.html">CV </a> </li>
+					<li><a onmouseover="show('projects')" href="projects.html">Projects</a> </li>
+					<li><a onmouseenter="show('hobbies')" href="hobbies.html">Hobbies</a> </li>
+				</ul>
+			</div>
+	</head>	<body>
 	<div>
-		<p class="normaltext"> 	This page will include all my complete or close
+	<p class="normaltext"> 	This page will include all my complete or close
 								to complete projects that can be played. 		</p>
-		<p class="normaltext">	So far I have only made some simple games in
+	<p class="normaltext">	So far I have only made some simple games in
 								unity and barely touched Unreal. These will be
 								the main 2 I will be including on this page for
 								the time being.									</p>
-		<hr>
-		<p>Unity</p>
-		<pre class="normaltext">
-		At this point in time I will be including place
-		holder modles, as well as a short clip of me
-		playing 1 of the games.							</pre>
-		<hr>
+	<hr>
+	<p>Unity</p>
+	<pre class="normaltext">
+	At this point in time I will be including place
+	holder modles, as well as a short clip of me
+	playing 1 of the games.							</pre>
+	<hr>
 
 								
 	</div>
