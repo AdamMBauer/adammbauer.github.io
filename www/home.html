@@ -1,36 +1,25 @@
-<html>
-	<div id="header">
+	
 		
-		<div style="float:left">
-			Welcome to My Site
-		</div>
-			
-		<div style="float:center">
-			<a href="index.html">Home</a> | <a href="CV.html">CV </a> | <a onmouseover="show('projects')" href="#">Projects</a> | <a onmouseenter="show('hobbies')" href="#">Hobbies</a> 
-		</div>
-	</div>
-	<head>
-			<title>Welcome!</title>
-			<link rel="stylesheet" type="text/css" href="css/style.css" />
-			<script>
-				function show(id)
-				{
-					var div = document.getElementById(id);
-					div.style.display = "block";
-				}
-				function hide(id)
-				{
-					var div = document.getElementById(id);
-					div.style.display = "none";
-				}
-				function hideAllMenus(id)
-				{
-					hide('projects');
-					hide('hobbies');
-					hide('stuffdiv');
-				}
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script>
+			function show(id)
+			{
+				var div = document.getElementById(id);
+				div.style.display = "block";
+			}
+			function hide(id)
+			{
+				var div = document.getElementById(id);
+				div.style.display = "none";
+			}
+			function hideAllMenus(id)
+			{
+				hide('projects');
+				hide('hobbies');
+				hide('stuffdiv');
+			}
 			</script>
-		</head>		
+	</head>		
 		
 	<body>
 
@@ -44,6 +33,6 @@
 		
 	</body>
 	<div class="footer">
-		<br> Adam Bauer &copy 2020 test
+		<br> Adam Bauer &copy 2020
 	</div>
 </html>
