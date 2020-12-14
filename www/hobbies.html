@@ -1,55 +1,84 @@
 <html>	
 	<head>
-		<title>__TITLE__ - Adam´s Site</title>
+		<title>__TITLE__ - Adam`s Site</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		
 		<script>
-			function show(id)
+			
+			var slideIndex = 1;
+			showSlides(slideIndex);
+			
+			// Next/previous controls
+			function plusSlides(n) 
 			{
-				var div = document.getElementById(id);
-				div.style.display = "block";
+			  showSlides(slideIndex += n);
 			}
-			function hide(id)
+
+			// Thumbnail image controls
+			function currentSlide(n) 
 			{
-				var div = document.getElementById(id);
-				div.style.display = "none";
+			  showSlides(slideIndex = n);
 			}
-			function hideAllMenus(id)
+
+			function showSlides(n) 
 			{
-				hide('projects');
-				hide('hobbies');
-				hide('stuffdiv');
+			
+				var i;
+				var slides = document.getElementsByClassName("mySlides");
+				var dots = document.getElementsByClassName("dot");
+				if (n > slides.length) {slideIndex = 1}
+				if (n < 1) {slideIndex = slides.length}
+				for (i = 0; i < slides.length; i++) 
+				{
+					slides[i].style.display = "none";
+				}
+				for (i = 0; i < dots.length; i++) 
+				{
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+				slides[slideIndex-1].style.display = "block";
+				dots[slideIndex-1].className += " active";
+				
 			}
+			
 		</script>
+		
 			<div id="header">
 		
 				<div style="float:center">
-					Welcome to My Site
+					<br>
+					Adam`s Portfolio
 				</div>
 				<br>
 				<ul>
-					<li><a onmouseover="show('Home')" href="home.html">Home</a> </li>
-					<li><a onmouseover="show('CV')" href="cv.html">CV </a> </li>
-					<li><a onmouseover="show('projects')" href="projects.html">Projects</a> </li>
-					<li><a onmouseenter="show('hobbies')" href="hobbies.html">Hobbies</a> </li>
+					<li><a href="home.html">Home</a> </li>
+					<li><a href="cv.html">CV </a> </li>
+					<li><a href="projects.html">Projects</a> </li>
+					<li><a href="hobbies.html">Hobbies</a> </li>
 				</ul>
 			</div>
 	</head>	<body>
+	<br>
 	<p class="normaltext">
 	I enjoy playing video games of most genres from
 	tactical resoucre management games to RPGs to more story
 	focused games. I find this both fun as well as a great
 	inspiration for my own ideas on how to do things better.
-	I also like to spend my time reading books. This includes
-	novels such as Harry Potter, the Power of Five or the left
-	hand of God or something like The Interpretation of
-	Financial Statements by Benjamin Graham. Another hobby of
-	mine includes going to the gym where I work as a Leisure
-	Assistant and working out.
+	I also like to spend my time reading books.
 	</p>
-	
+	<p class="normaltext">
+	This includes novels such as "Harry Potter", "The Power of
+	Five" or the "Left hand of God" or something like The
+	"Interpretation of Financial Statements" by Benjamin Graham.
+	I also find	games and books from different cultures such 
+	as the chinese	novel "I Shall Seal the Heavens" and 
+	"Amazing cultivation simulator".
+	</p>	
 </body>
 	<div class="footer">
+		<p style="color: white" class="normaltext">
 		Email: s5318813@bournemouth.ac.uk
-		<br> Adam Bauer &copy 2020
+		<br>Adam Bauer &copy 2020
+		</p>
 	</div>
 </html>
