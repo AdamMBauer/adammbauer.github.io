@@ -1,53 +1,130 @@
-<html>
+<html>	
 	<head>
-		<title>__TITLE__ - Adam´s Site</title>
+		<title>Home - Adam`s Site</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		
 		<script>
-			function show(id)
+			
+			var slideIndex = 1;
+			showSlides(slideIndex);
+			
+			// Next/previous controls
+			function plusSlides(n) 
 			{
-				var div = document.getElementById(id);
-				div.style.display = "block";
+			  showSlides(slideIndex += n);
 			}
-			function hide(id)
+
+			// Thumbnail image controls
+			function currentSlide(n) 
 			{
-				var div = document.getElementById(id);
-				div.style.display = "none";
+			  showSlides(slideIndex = n);
 			}
-			function hideAllMenus(id)
+
+			function showSlides(n) 
 			{
-				hide('projects');
-				hide('hobbies');
-				hide('stuffdiv');
+			
+				var i;
+				var slides = document.getElementsByClassName("mySlides");
+				var dots = document.getElementsByClassName("dot");
+				if (n > slides.length) {slideIndex = 1}
+				if (n < 1) {slideIndex = slides.length}
+				for (i = 0; i < slides.length; i++) 
+				{
+					slides[i].style.display = "none";
+				}
+				for (i = 0; i < dots.length; i++) 
+				{
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+				slides[slideIndex-1].style.display = "block";
+				dots[slideIndex-1].className += " active";
+				
 			}
-			</script>
+			
+		</script>
+		
 			<div id="header">
 		
-				<div style="float:left">
-					Welcome to My Site
+				<div style="text-align:center">
+					<br>
+					Adam`s Portfolio
 				</div>
-			
-				<div style="float:left">
-					<a href="index.html">Home</a> | <a href="CV.html">CV </a> | <a onmouseover="show('projects')" href="#">Projects</a> | <a onmouseenter="show('hobbies')" href="#">Hobbies</a> 
-				</div>
+				<br>
+				<ul class="normaltext"><!--class="navactive"-->
+					<li><a href="index.html">Home</a> </li>
+					<li><a href="projects.html">Projects</a> </li>
+					<li><a href="models.html">Models</a> </li>
+					<li><a href="hobbies.html">Hobbies</a> </li>
+					<li><a href="cv.html">CV </a> </li>
+				</ul>
 			</div>
-	</head>	
-------------------------------
-	<body>
+	</head>	<body style="background: rgb(135, 206, 250); margin: 0; padding: 0" onload="plusSlides(0)">		
+	<div style="padding: 8">
+		<br>
+		<br>
+		<p class="largetext">Welcome to my Portfolio</p>
+		<p class="normaltext">
+		The home page is to show off what I am working on and to give a quick overview
+		on what I will be working on in the near future</p>
+		<hr>
+		<br>
+		<br>
+					<!-- Slideshow container -->
+				
+		<div style="width: 50%; height: 50%; margin: auto;">
+		
+			<!-- Next and previous buttons -->
+			<div style="position: relative; top: 200px; left: -10px; float: left;">
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			</div>
+			
+			<div style="position: relative; top: 200px; right: -10px; float: right;">
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+			
+			<div class="slideshow-container">
 
-		<div>
-			<p class="normaltext"> 	This is the homepage to my portfolio site.
-									It is still a work in progress and some images
-									will be place holders for when I ave more work
-									id like to show off.</p>
-		
-			<img style="height: 200px; width 200px" src="images/photo-1494548162494-384bba4ab999.jpg">
-			<img style="height: 20%; width 20%" src="images/GettyImages-1199242002-1-scaled.jpg">
-			<img style="height: 20%; width 20%" src="images/733333bd820b9df1a622a43a5275f7f7.jpg">
+				<!-- Full-width images with number and caption text -->
+				<div class="mySlides fade">
+					<div style="position: relative; bottom: -10;" class="numbertext">1 / 3</div>
+					<img src="images/istockphoto-1071204136-612x612.jpg" style="width:100%; height 100%">
+					<div style="position: relative; bottom: -20;" class="text">Placeholder 1</div>
+				</div>
+
+				<div class="mySlides fade">
+					<<div style="position: relative; bottom: -10;" class="numbertext">2 / 3</div>
+					<img src="images/GettyImages-1199242002-1-scaled.jpg" style="width:100%">
+					<div style="position: relative; bottom: -20;" class="text">Placeholder 2</div>
+				</div>
+
+				<div class="mySlides fade">
+					<div style="position: relative; bottom: -10;" class="numbertext">3 / 3</div>
+					<img src="images/733333bd820b9df1a622a43a5275f7f7.jpg" style="width:100%">
+					<div style="position: relative; bottom: -20;" class="text">Placeholder 3</div>
+				</div>
+				
+			</div>
+			
+		</div>	
+		<br>
+
+		<!-- The dots/circles -->
+		<div style="text-align:center">
+		  <span class="dot" onclick="currentSlide(1)"></span>
+		  <span class="dot" onclick="currentSlide(2)"></span>
+		  <span class="dot" onclick="currentSlide(3)"></span>
 		</div>
-		
-	</body>
------------------------------
-	<div class="footer">
-		<br> Adam Bauer &copy 2020
+	</div>
+				
+</body><br>
+<br>
+<br>
+<br>
+<br>
+	<div class="footer">	
+			<p class="normaltext">
+		Email: s5318813@bournemouth.ac.uk
+		<br>Adam Bauer &copy 2020
+		</p>
 	</div>
 </html>
